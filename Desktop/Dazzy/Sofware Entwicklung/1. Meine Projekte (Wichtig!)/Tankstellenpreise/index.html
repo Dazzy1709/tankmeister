@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/mapElements.css">
+  <link rel="stylesheet" href="/css/mapInfobox.css">
+  <link rel="stylesheet" href="/css/menuElements.css">
+  <link rel="stylesheet" href="/css/tankstellenFigures.css">
+  <title>Tankstellen finder</title>
+</head>
+<body>
+
+  <div id="map"></div>
+  <div id="sidebar"></div>
+  
+  <div class="slider-container">
+    
+    <input type="range" id="tank-slider" min="1" max="25" value="1">
+    <br>
+    <label for="tank-slider">Such Radius (in Km)</label>
+    <br>
+    <span id="slider-value">1</span>
+  </div>
+
+  <h2>Tankstellen in der nähe</h2>
+  <section id="tankstellenAuflistung" class="andere-tankstellen">
+  </section>
+
+
+  <script type="module" defer>
+    import { loadGoogleMapsAPI } from './scripts/googleMapsLoader.js';
+    loadGoogleMapsAPI();
+  </script>
+</body>
+</html>

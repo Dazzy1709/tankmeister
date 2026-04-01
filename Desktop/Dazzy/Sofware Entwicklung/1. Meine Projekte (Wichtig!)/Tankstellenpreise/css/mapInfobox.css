@@ -1,0 +1,376 @@
+
+/* Custom InfoWindow Styling */
+/* InfoWindow Container - Matching Card Style */
+.gm-style .gm-style-iw-c {
+  border-radius: 20px !important;
+  background: rgba(34, 34, 34, 0.95) !important;
+  backdrop-filter: blur(10px) !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2) !important;
+  padding: 0 !important;
+  border: none !important;
+  color: white !important;
+}
+
+/* Arrow/Tail of InfoWindow */
+.gm-style .gm-style-iw-t::after {
+  background: rgba(34, 34, 34, 0.95) !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+/* Content Area - Mobile Optimized */
+.gm-style .gm-style-iw-d {
+  padding: 8px !important;
+  overflow: hidden !important;
+  max-height: none !important;
+}
+
+/* Info Box Container */
+.gm-style .gm-style-iw {
+  max-width: 85vw !important;
+  max-height: 70vh !important;
+  border-radius: 20px !important;
+}
+
+.info-box-tankstelle {
+  font-family: Roboto, Arial, sans-serif;
+  min-width: 240px;
+  max-width: 320px;
+  padding: 12px;
+  background: rgba(34, 34, 34, 0.98);
+  backdrop-filter: blur(20px);
+  position: relative;
+  border-radius: 16px;
+  animation: fadeInUp 0.4s ease-out forwards;
+}
+
+.info-box-tankstelle::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 16px;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.15), rgba(255,255,255,0.08));
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.info-box-tankstelle strong {
+  font-size: 0.95rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #fff, #e0e0e0);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: block;
+  margin-bottom: 10px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  letter-spacing: -0.02em;
+}
+
+.info-box-tankstelle .address {
+  color: #aaa;
+  font-size: 0.7rem;
+  line-height: 1.4;
+  margin-bottom: 8px;
+  padding: 6px 10px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+  word-break: break-word;
+}
+
+.info-box-tankstelle .prices-container {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.info-box-tankstelle .price-item {
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+  transition: all 0.2s ease;
+  overflow: hidden;
+}
+
+.info-box-tankstelle .price-item:active {
+  transform: translateX(4px);
+}
+
+.info-box-tankstelle .price-item .price-content {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 10px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 8px;
+  font-weight: 400;
+  font-size: 0.7rem;
+  color: #e0e0e0;
+  gap: 0.5rem;
+}
+
+.info-box-tankstelle .price-label {
+  font-weight: 600;
+  font-size: 0.7rem;
+  color: #e0e0e0;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.info-box-tankstelle .price-value {
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.info-box-tankstelle .price-item.diesel .price-value {
+  color: #4caf50;
+}
+
+.info-box-tankstelle .price-item.e5 .price-value {
+  color: #2196f3;
+}
+
+.info-box-tankstelle .price-item.e10 .price-value {
+  color: #ff9800;
+}
+
+.info-box-tankstelle .price-item.diesel {
+  background: linear-gradient(135deg, rgba(76, 175, 80, 0.15), rgba(33, 150, 243, 0.1));
+}
+
+.info-box-tankstelle .price-item.e5 {
+  background: linear-gradient(135deg, rgba(33, 150, 243, 0.15), rgba(33, 150, 243, 0.08));
+}
+
+.info-box-tankstelle .price-item.e10 {
+  background: linear-gradient(135deg, rgba(255, 152, 0, 0.15), rgba(255, 152, 0, 0.08));
+}
+
+.info-box-tankstelle .start-route-btn {
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 12px;
+  margin-top: 8px;
+  background: #4285f4;
+  backdrop-filter: blur(5px);
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.8rem;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  position: relative;
+  overflow: hidden;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Button hover effect for desktop, active for mobile */
+@media (hover: hover) {
+  .info-box-tankstelle .start-route-btn:hover {
+    background: #3367d6;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(66, 133, 244, 0.3);
+  }
+}
+
+.info-box-tankstelle .start-route-btn:active {
+  transform: translateY(1px);
+  background: #2a5bc0;
+}
+
+/* Button gradient border effect */
+.info-box-tankstelle .start-route-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 10px;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.3), rgba(255,255,255,0.1));
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* Close button */
+.gm-style-iw-t button {
+  background: rgba(34, 34, 34, 0.9) !important;
+  border-radius: 5px !important;
+  width: 100% !important;
+  height: 32px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  backdrop-filter: blur(5px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+}
+
+.gm-style-iw-t button:hover {
+  background: rgba(34, 34, 34, 1) !important;
+  transform: scale(1.05);
+}
+
+/* Scrollbar Styling */
+.gm-style .gm-style-iw-d {
+  max-height: 50vh !important;
+  overflow-y: auto !important;
+}
+
+.gm-style .gm-style-iw-d::-webkit-scrollbar {
+  width: 3px;
+}
+
+.gm-style .gm-style-iw-d::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+}
+
+.gm-style .gm-style-iw-d::-webkit-scrollbar-thumb {
+  background: rgba(66, 133, 244, 0.5);
+  border-radius: 10px;
+}
+
+/* Close Button Styling */
+.gm-style .gm-ui-hover-effect {
+  width: 100% !important;
+  height: 25px !important;
+  margin: 0px auto !important;
+  padding: 1px !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  backdrop-filter: blur(5px) !important;
+  background-color: red !important;
+}
+
+.gm-style .gm-ui-hover-effect:hover {
+  background: rgba(255, 255, 255, 0.15) !important;
+}
+
+.gm-style .gm-ui-hover-effect img {
+  filter: brightness(0) invert(1) !important;
+  width: 12px !important;
+  height: 12px !important;
+}
+
+/* Animation - Matching fadeInUp */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .gm-style .gm-style-iw {
+    max-width: 90vw !important;
+    max-height: 60vh !important;
+  }
+  
+  .info-box-tankstelle {
+    min-width: 200px;
+    max-width: 280px;
+    padding: 10px;
+  }
+  
+  .info-box-tankstelle strong {
+    font-size: 0.85rem;
+    margin-bottom: 8px;
+    padding-bottom: 5px;
+  }
+  
+  .info-box-tankstelle .address {
+    font-size: 0.65rem;
+    padding: 5px 8px;
+    margin-bottom: 6px;
+  }
+  
+  .info-box-tankstelle .price-content {
+    padding: 5px 8px;
+    font-size: 0.65rem;
+  }
+  
+  .info-box-tankstelle .price-label {
+    font-size: 0.65rem;
+  }
+  
+  .info-box-tankstelle .price-value {
+    font-size: 0.8rem;
+  }
+  
+  .info-box-tankstelle .start-route-btn {
+    padding: 8px 10px;
+    font-size: 0.75rem;
+    margin-top: 6px;
+  }
+  
+  /* Better touch targets for mobile */
+  .info-box-tankstelle .price-item {
+    min-height: 32px;
+  }
+  
+  .info-box-tankstelle .price-content {
+    min-height: 32px;
+  }
+  
+  .info-box-tankstelle .start-route-btn {
+    min-height: 38px;
+  }
+}
+
+/* Very small phones (under 400px) */
+@media (max-width: 480px) {
+  .gm-style .gm-style-iw {
+    max-width: 95vw !important;
+  }
+  
+  .info-box-tankstelle {
+    min-width: 180px;
+    max-width: 260px;
+    padding: 8px;
+  }
+  
+  .info-box-tankstelle strong {
+    font-size: 0.8rem;
+  }
+  
+  .info-box-tankstelle .address {
+    font-size: 0.6rem;
+  }
+  
+  .info-box-tankstelle .price-label {
+    font-size: 0.6rem;
+  }
+  
+  .info-box-tankstelle .price-value {
+    font-size: 0.75rem;
+  }
+  
+  .info-box-tankstelle .start-route-btn {
+    font-size: 0.7rem;
+    padding: 6px 8px;
+  }
+}
