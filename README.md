@@ -1,25 +1,21 @@
-# tankmeister
-A web application that uses the Tankerkoenig API and Google Maps JavaScript API to locate nearby gas stations, display real-time fuel prices, and provide route navigation based on the user’s location. 
+# ⛽ Tankmeister
 
-
-# ⛽ Fuel Finder App
-
-A lightweight web application built with vanilla JavaScript that helps users find nearby gas stations, compare real-time fuel prices, and navigate to their preferred location using integrated mapping services.
+Eine Webanwendung, die die Tankerkoenig API und die Google Maps JavaScript API nutzt, um nahegelegene Tankstellen zu finden, aktuelle Kraftstoffpreise anzuzeigen und eine Routenführung basierend auf dem Standort des Nutzers bereitzustellen.
 
 ---
 
-## 📌 Features
+## 📌 Funktionen
 
-* 📍 Automatically detects the user's current location
-* ⛽ Displays nearby gas stations in real-time
-* 💰 Shows up-to-date fuel prices from the Tankerkoenig API
-* 🗺️ Interactive map powered by Google Maps
-* 🚗 Route navigation to selected gas stations
-* ⚡ Fast and responsive interface using vanilla JavaScript
+* 📍 Erkennt automatisch den aktuellen Standort des Nutzers
+* ⛽ Zeigt Tankstellen in der Nähe in Echtzeit an
+* 💰 Liefert aktuelle Kraftstoffpreise über die Tankerkoenig API
+* 🗺️ Interaktive Karte basierend auf Google Maps
+* 🚗 Routenplanung zu ausgewählten Tankstellen
+* ⚡ Schnelle und performante Oberfläche mit Vanilla JavaScript
 
 ---
 
-## 🛠️ Tech Stack
+## 🛠️ Technologie-Stack
 
 * **Frontend:** Vanilla JavaScript, HTML, CSS
 * **APIs:** Tankerkoenig API, Google Maps JavaScript API
@@ -29,51 +25,51 @@ A lightweight web application built with vanilla JavaScript that helps users fin
 
 ## 📦 Installation
 
-Clone the repository:
+Repository klonen:
 
-```bash id="a1b2c3"
-git clone https://github.com/your-username/fuel-finder-app.git
-cd fuel-finder-app
+```bash
+git clone https://github.com/Dazzy1709/tankmeister.git
+cd tankmeister
 ```
 
 ---
 
-## 🔑 Setup
+## 🔑 Einrichtung
 
-1. Obtain an API key from Google Maps Platform
-2. Get an API key from Tankerkoenig
-3. Add your API keys to the project:
+1. Einen API-Key bei der Google Maps Platform erstellen
+2. Einen API-Key bei Tankerkoenig beantragen
+3. API-Keys im Projekt hinterlegen:
 
-```javascript id="d4e5f6"
+```javascript
 // config.js
-const GOOGLE_MAPS_API_KEY = "your_key_here";
-const TANKERKOENIG_API_KEY = "your_key_here";
+const GOOGLE_MAPS_API_KEY = "DEIN_API_KEY";
+const TANKERKOENIG_API_KEY = "DEIN_API_KEY";
 ```
 
 ---
 
-## ▶️ Usage
+## ▶️ Nutzung
 
-Open the project in your browser:
+Projekt im Browser öffnen:
 
-```bash id="g7h8i9"
+```bash
 open index.html
 ```
 
-Or use a local development server for best results.
+Alternativ empfiehlt sich die Nutzung eines lokalen Entwicklungsservers.
 
 ---
 
 ## 📷 Screenshots
 
-*(Add screenshots or a demo GIF here to showcase the app interface and features)*
+*(Hier Screenshots oder ein Demo-GIF der Anwendung einfügen)*
 
 ---
 
-## 📁 Project Structure
+## 📁 Projektstruktur
 
-```id="j1k2l3"
-fuel-finder-app/
+```
+tankmeister/
 │── index.html
 │── styles/
 │── scripts/
@@ -83,35 +79,35 @@ fuel-finder-app/
 
 ---
 
-## 🧠 How It Works
+## 🧠 Funktionsweise
 
-* The app retrieves the user's location using the browser's Geolocation API
-* It fetches nearby gas station data from the Tankerkoenig API
-* Results are displayed on an interactive Google Map
-* Users can view fuel prices and select a station
-* The app generates a route to the selected location via Google Maps
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome!
-
-1. Fork the repository
-2. Create a feature branch (`feature/your-feature`)
-3. Commit your changes
-4. Push to your branch
-5. Open a Pull Request
+* Die Anwendung ermittelt den Standort des Nutzers über die Geolocation API des Browsers
+* Anschließend werden Tankstellendaten über die Tankerkoenig API abgerufen
+* Die Ergebnisse werden auf einer interaktiven Google Maps Karte dargestellt
+* Nutzer können Preise vergleichen und eine Tankstelle auswählen
+* Für die gewählte Tankstelle wird eine Route über Google Maps berechnet
 
 ---
 
-## 📄 License
+## 🤝 Mitwirken
 
-This project is licensed under the MIT License.
+Beiträge sind willkommen!
+
+1. Repository forken
+2. Neuen Branch erstellen (`feature/dein-feature`)
+3. Änderungen committen
+4. Branch pushen
+5. Pull Request erstellen
 
 ---
 
-## 👨‍💻 Author
+## 📄 Lizenz
 
-Your Name
-GitHub: https://github.com/your-username
+Dieses Projekt steht unter der MIT-Lizenz.
+
+---
+
+## 👨‍💻 Autor
+
+Dein Name
+GitHub: https://github.com/Dazzy1709
